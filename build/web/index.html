@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina De inicio</title>
+    <link rel="stylesheet" href="./css/estilo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+</head>
+<body background="./multimedia/istockphoto-1145388072-170667a.jpg">
+    <div class="principal">
+        <div class="izquierda">
+            <button class="boton"  id="izquierda" onclick="ocultarpanel6()"> 
+                <img src="multimedia/flechaizquieda.png" class="imagen">
+            </button>
+            <br><br><br><br><br><br><br><br><br>
+        </div>
+        <div class="contenido" id="contenido">
+            <div class="c1">
+                <br>
+                <br>
+                <img class="nosotros" src="multimedia/received_1287595765042712.jpg" class="nosotros" >
+                <br>
+                <br>
+            </div>
+            <div class="c1">
+                <h1><center>Trabajo De Cifrado DES</center></h1>
+                <h1><center>Equipo:</center></h1>
+                <h2><center>Gutierrez Bueno Elizabeth Andrea</center></h2>
+                <h2><center>Vasco Giraldo Juan Esteban</center></h2>
+                <h1><center>Grupo:</center></h1>
+                <h2><center>5IV7</center></h2>
+            </div>
+            <br>
+            <br>
+        </div>
+        <div class="contenido1" id="contenido1">
+            <div class="c1">
+                <br>
+                <br>
+                <img class="nosotros" src="multimedia/el-cifrado-más-seguro-del-mundo-1000x600.jpg" class="nosotros" >
+                <br>
+                <br>
+            </div>
+            <div class="c1">
+                <h1><center>Cifrar</center></h1>
+                <h1><center>Cifrar Un Archivo Con el algoritmo DES</center></h1>
+                <button class="boton1" id="myBtn" ><div class="link"><center><h2>Cifrar</h2></center></div></button>
+            <br><br>
+            </div>
+        </div>
+        <div class="contenido2" id="contenido2">
+            <div class="c1">
+                <br>
+                <br>
+                <img class="nosotros" src="multimedia/miau.jpg" class="nosotros" >
+                <br>
+                <br>
+            </div>
+            <div class="c1">
+                <h1><center>Descifrar</center></h1>
+                <h1><center>Descifrar Un Archivo Con el algoritmo DES</center></h1>
+                <button class="boton1" id="myBtn2" ><div class="link"><center><h2>Descifrar</h2></center></div></button>
+            <br><br>
+            </div>
+        </div>
+        <div class="derecha">
+            <button class="boton" id="derecha" onclick="ocultarpanel1()" >
+                <img src="multimedia/flechaderecha.png" class="imagen">
+            </button>
+            <br><br><br><br><br><br><br><br><br>
+        </div>
+    </div>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close">&times;</span>
+            <h2>Cifrar Archivo</h2>
+            <form method="POST" action="Cifrar" enctype="multipart/form-data">
+                <input type="text" id="llave1" name="llave1" placeholder="Ingrese la llave" class="llave" minlength="8" maxlength="8">
+                <br>
+                <br>
+                <br>
+                <div class="input__row uploader" style="margin-left: 35%;">
+                    <div id="inputval" class="input-value"></div>
+                    <label for="file_1"></label>
+                    <input id="file_1" name="file_1" class="upload" type="file" >
+                </div>
+                <br>
+                <br>
+                <button type="submit" class="boton2" ><div class="link"><center><h2>Cifrar</h2></center></div></button>
+            </form>
+    </div>
+    </div>
+    <div id="myModal2" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close2">&times;</span>
+            <h2>Descifrar Archivo</h2>
+            <form action="Descifrar" method="POST" name="cifrar" enctype="multipart/form-data">
+                <input type="text" id="llave2" name="llave2" placeholder="Ingrese la llave" class="llave" minlength="8" maxlength="8">
+                <br>
+                <br>
+                <br>
+                <div class="input__row uploader" style="margin-left: 35%;">
+                    <div id="inputval2" class="input-value"></div>
+                    <label for="file_2"></label>
+                    <input id="file_2" name="file_2" class="upload" type="file" >
+                </div>
+                <br>
+                <br>
+                <button class="boton2"><div class="link"><center><h2>Cifrar</h2></center></div></button>
+            </form>
+        </div>
+    </div>
+    <script>
+        function ocultarpanel1(){
+            document.getElementById("contenido").style.display = "none";
+            document.getElementById("contenido1").style.display = "inline-block";
+            document.getElementById("izquierda").onclick = function (){ocultarpanel4()};
+            document.getElementById("derecha").onclick = function (){ocultarpanel2()};
+        }
+        function ocultarpanel2(){
+            document.getElementById("contenido1").style.display = "none";
+            document.getElementById("contenido2").style.display = "inline-block";
+            document.getElementById('izquierda').onclick = function (){ocultarpanel3()};
+            document.getElementById('derecha').onclick = function (){ocultarpanel5()};
+        }
+        function ocultarpanel3(){
+            document.getElementById("contenido2").style.display = "none";
+            document.getElementById("contenido1").style.display = "inline-block";
+            document.getElementById('izquierda').onclick = function (){ocultarpanel4()};
+            document.getElementById('derecha').onclick = function (){ocultarpanel2()};
+        }
+        function ocultarpanel4(){
+            document.getElementById("contenido1").style.display = "none";
+            document.getElementById("contenido").style.display = "inline-block";
+            document.getElementById('izquierda').onclick = function (){ocultarpanel6()};
+            document.getElementById('derecha').onclick = function (){ocultarpanel1()};
+        }
+        function ocultarpanel5(){
+            document.getElementById("contenido2").style.display = "none";
+            document.getElementById("contenido").style.display = "inline-block";
+            document.getElementById('izquierda').onclick = function (){ocultarpanel6()};
+            document.getElementById('derecha').onclick = function (){ocultarpanel1()};
+        }
+        function ocultarpanel6(){
+            document.getElementById("contenido").style.display = "none";
+            document.getElementById("contenido2").style.display = "inline-block";
+            document.getElementById('izquierda').onclick = function (){ocultarpanel3()};
+            document.getElementById('derecha').onclick = function (){ocultarpanel5()};
+        }
+        var modal2 = document.getElementById("myModal2");
+        var btn2 = document.getElementById("myBtn2");
+        var span2 = document.getElementById("close2");
+        var modal = document.getElementById("myModal");
+        var btn = document.getElementById("myBtn");
+        var span = document.getElementById("close");
+        
+        btn.onclick = function() {
+             modal.style.display = "block";
+        }
+        span.onclick = function() {
+                    modal.style.display = "none";
+        }
+       btn2.onclick = function() {
+             modal2.style.display = "block";
+        }
+        span2.onclick = function() {
+                    modal2.style.display = "none";
+        }
+        window.onclick = function(event) {
+            if (event.target == modal2) {
+                modal2.style.display = "none";
+            }
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+       }
+       $('#file_1').on('change',function(){
+        $('#inputval').text( $(this).val());
+        });
+        $('#file_2').on('change',function(){
+        $('#inputval2').text( $(this).val());
+        });
+    </script>
+</body>
+</html>
