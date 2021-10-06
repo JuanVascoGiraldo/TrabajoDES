@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <form method="POST"enctype="multipart/form-data" action="Cifrar" >
+                <input type="text" id="llave" placeholder="Ingrese la llave" class="llave" minlength="8" maxlength="8">
+                <br>
+                <br>
+                <br>
+                <div class="input__row uploader" style="margin-left: 35%;">
+                    <div id="inputval" class="input-value"></div>
+                    <label for="file_1"></label>
+                    <input id="file_1" name="file_1" class="upload" type="file" >
+                </div>
+                <br>
+                <br>
+                <button type="submit" class="boton2" ><div class="link"><center><h2>Cifrar</h2></center></div></button>
+            </form>
+    </body>
+</html>
